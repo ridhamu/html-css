@@ -1,0 +1,176 @@
+/* 1. Box-sizing border-box to all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Use modern, system font stack */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    color: #111;
+    background-color: #fff;
+}
+
+/* 4. Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* 5. Remove default button styles */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* 6. Remove anchor underline */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 7. Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 8. Remove default table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* 9. Set heading defaults */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* 10. Ensure form elements are easily clickable */
+button, input, select, textarea {
+    touch-action: manipulation;
+}
+
+/* 11. Prevent overflow issues */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+/*styles here*/
+.container{
+    width: 100%;
+    height: 100dvh;
+    /*border: 2px solid black;*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container-image{
+    width: 100%;
+    height: 100%;
+    /*border: 2px solid cyan;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.container-image img {
+    object-fit: cover;
+}
+
+
+.container-form {
+    /*border: 2px solid yellowgreen;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form form {
+    border: 2px solid black;
+    height: auto;
+    background-color: #A1B2C3;
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+    display: grid;
+}
+
+.container-form form h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.container-form form input {
+    width: 400px;
+    padding: 1.5rem;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.container-form form a {
+    color: #131DAA;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.container-form form a:hover {
+    text-decoration: underline;
+}
+
+#myButton {
+    border: 1px solid black;
+    background-color: #EE5F59;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: black;
+    font-size: x-large;
+    font-weight: normal;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+#myButton:hover {
+    background-color: #6BA1D5;
+}
+
+@media (width <= 768px) {
+    html{
+        background-color: red;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Change to single column */
+    }
+
+    .container-image {
+        display: none; /* Hide image section */
+    }
+
+    .container-form {
+        width: 100%;
+    }
+}
+
+
+
+
